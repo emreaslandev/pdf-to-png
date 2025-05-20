@@ -7,7 +7,7 @@ def pdfleri_pngye_cevir(klasor_yolu):
             pdf_yolu = os.path.join(klasor_yolu, dosya)
             sayfalar = convert_from_path(pdf_yolu)
             for i, sayfa in enumerate(sayfalar):
-                png_adi = f"{os.path.splitext(dosya)[0]}_sayfa_{i+1}.png"
+                png_adi = f"{os.path.splitext(dosya)[0]}.png"
                 png_yolu = os.path.join(klasor_yolu, png_adi)
                 sayfa.save(png_yolu, 'PNG')
             print(f"{dosya} dönüştürüldü.")
